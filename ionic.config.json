@@ -1,0 +1,7 @@
+{
+  "name": "Gelaendespiel_App",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

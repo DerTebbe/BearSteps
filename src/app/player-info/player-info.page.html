@@ -1,0 +1,86 @@
+<ion-header>
+    <ion-toolbar color="dark">
+        <ion-title class="ion-text-uppercase ion-text-center">Spielstart</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <div class="style"></div>
+    <ion-grid class="ion-text-center">
+        <div class="mrx ion-page-hidden" #mrx>
+            <ion-row>
+                <ion-col class="ion-text-center">
+                    <ion-text class="header">Du bist Mr. X!</ion-text>
+                </ion-col>
+            </ion-row>
+            <ion-row>
+                <ion-col size="12" class="ion-text-center">
+                    <img class="rolePic" src="https://i.ibb.co/H4GkQ6q/MrxBg.png"/>
+                    <ion-col><br/>
+                        <ion-text class="subText">Als Mr. X musst du zu Beginn des Spiels ein Geheimwort festlegen. Halte dich bedeckt und lass
+                            dich nicht erwischen!<br>
+                            Viel Glück!
+                        </ion-text>
+                    </ion-col>
+                </ion-col>
+            </ion-row>
+            <ion-button class="btnHide" expand="full" size="large" color="dark" (click)="play()">
+                <span>STARTEN</span>
+            </ion-button>
+        </div>
+        <div class="detective ion-page-hidden" #detective>
+            <ion-row>
+                <ion-col class="ion-text-center">
+                    <ion-text class="header">Du bist ein Detektiv!!</ion-text>
+                </ion-col>
+            </ion-row>
+            <ion-row>
+                <ion-col size="12" class="ion-text-center">
+                    <img class="rolePic" src="https://i.ibb.co/pZc36yh/Detecive-Bg.png"/>
+                    <ion-col><br/>
+                        <ion-text class="subText">Dein Ziel ist es, Mr. X zu finden, ehe die Zeit abläuft. Koordiniere dich dafür
+                            mit deinem Team. Viel Glück!
+                        </ion-text>
+                    </ion-col>
+                </ion-col>
+            </ion-row>
+            <div>
+                <ion-button id="btnTime" disabled (click)="play()" expand="full" size="large" color="dark">
+                     <countdown *ngIf="room.catchword" class="counter" [config]="{leftTime:180, format: 'm:ss'}"></countdown>
+                </ion-button>
+                <div class="box hidden align-items-center text-center" #timer3>
+                    <div class="slideImg">
+                        <img class="slideImg" src="https://i.ibb.co/0FKZL5m/drei.png"
+                             alt="WelcomeIcon"/>
+                    </div>
+                </div>
+                <div class="box hidden align-items-center text-center" #timer2>
+                    <div class="slideImg">
+                        <img class="slideImg" src="https://i.ibb.co/zSDk1dz/zwei.png"
+                             alt="WelcomeIcon"/>
+                    </div>
+                </div>
+                <div class="box hidden align-items-center text-center" #timer>
+                    <div class="slideImg">
+                        <img class="slideImg" src="https://i.ibb.co/JnrVC0m/ein.png"
+                             alt="WelcomeIcon"/>
+                    </div>
+                </div>
+                <div class="box hidden align-items-center text-center" #go>
+                    <div class="slideImgGo">
+                        <img class="slideImg" src="https://i.ibb.co/9sDfqTR/go.png"
+                             alt="WelcomeIcon"/>
+                    </div>
+                </div>
+            </div>
+            <ion-row>
+                <ion-col class="timeText">
+                    <ion-text *ngIf="room.catchword">Mr. X versteckt sich jetzt!</ion-text>
+                    <ion-text *ngIf="!room.catchword">Mr. X bereitet sich gerade vor. Erst dann beginnt euer Timer!</ion-text>
+                    <br/>
+                </ion-col>
+            </ion-row>
+        </div>
+    </ion-grid>
+</ion-content>
+

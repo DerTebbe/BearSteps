@@ -1,0 +1,109 @@
+@import "../../global";
+
+ion-title {
+  font-family: "Fira Sans Condensed", serif;
+  font-size: 25px;
+}
+
+ion-item-divider {
+  --background: opacity(0.9) !important;
+}
+
+ion-avatar {
+  width: 25% !important;
+  height: 25% !important;
+}
+
+ion-list {
+  background-color: transparent !important;
+
+}
+
+ion-item {
+  opacity: 0.9;
+}
+
+h3 {
+  font-family: Oswald, serif;
+  height: 100%;
+  font-size: 21px;
+}
+
+ion-list-header, .headerChart {
+  font-family: Oswald, serif;
+  font-size: 19px;
+  color: $white;
+  text-transform: uppercase;
+}
+
+
+.style {
+  background-image:  url("../../assets/statistic/backgroundStat.png");
+  background-position: center;
+  background-size: cover;
+  position: absolute;
+  width: 100%;
+  height: 130%;
+}
+
+.divText {
+  font-weight: bold;
+  font-family: Dosis, serif;
+  font-size: 20px;
+  color: $black;
+  z-index: 2;
+
+}
+
+
+.listText {
+  font-family: Dosis, serif !important;
+}
+
+
+// Thought bubble
+.thought {
+  display: flex;
+  background-color: $white;
+  padding: 20px;
+  border-radius: 30px;
+  min-width: 40px;
+  max-width: 220px;
+  min-height: 40px;
+  margin: 30px;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  z-index: 2;
+}
+
+.thought:before,
+.thought:after {
+  content: "";
+  background-color: $white;
+  border-radius: 50%;
+  display: block;
+  position: absolute;
+  z-index: -1;
+}
+
+.thought:before {
+  width: 44px;
+  height: 44px;
+  top: -12px;
+  left: 28px;
+  box-shadow: -50px 30px 0 -12px $white;
+}
+
+.thought:after {
+  bottom: -10px;
+  right: 26px;
+  width: 30px;
+  height: 30px;
+  box-shadow: 40px -34px 0 0 $white,
+  -28px -6px 0 -2px #fff,
+  -24px 17px 0 -6px #fff,
+  -5px 25px 0 -10px #fff;
+
+}

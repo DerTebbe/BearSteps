@@ -1,0 +1,83 @@
+<ion-header>
+  <ion-toolbar color="dark">
+    <ion-buttons slot="start">
+      <ion-icon size="large" color="dark" name="close-outline"></ion-icon>
+    </ion-buttons>
+    <ion-title class="ion-text-center ion-text-wrap ion-text-uppercase">Zusammenfassung</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="leaveGame()">
+        <ion-icon size="medium" name="home"></ion-icon></ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <div *ngIf="displayDefeat" class="rainoverlay win-container" @container>
+    <div>
+      <i class="rain" *ngFor="let rain of raindrops"></i>
+    </div>
+
+    <div class="before"></div>
+    <div class="after"></div>
+    <div class="message">
+      <h1>{{defeatMessage}}</h1>
+    </div>
+  </div>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col size="2"></ion-col>
+      <ion-col class="ion-text-center" size="12">
+        <img *ngIf="!(this.winner)" class="winner" alt="logo" src="../../assets/statistic/detective.png">
+        <img *ngIf="this.winner" class="winner" alt="logo" src="../../assets/statistic/mrxStat.png">
+        <p>{{headerText}}</p>
+      </ion-col>
+      <ion-col size="2"></ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="1"></ion-col>
+      <ion-col class="ion-text-center" size="10">
+        <ion-item lines="none">
+          <ion-avatar slot="start">
+            <ion-icon size="large" name="help-outline"></ion-icon>
+          </ion-avatar>
+          <ion-label class="ion-text-wrap">{{endType}}</ion-label>
+        </ion-item>
+      </ion-col>
+      <ion-col size="1"></ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="1"></ion-col>
+      <ion-col class="ion-text-center" size="10">
+        <ion-item lines="none">
+          <ion-avatar slot="start">
+            <ion-icon size="large" name="time-outline"></ion-icon>
+          </ion-avatar>
+          <ion-label>{{timePlayed}}</ion-label>
+        </ion-item>
+      </ion-col>
+      <ion-col size="1"></ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="1"></ion-col>
+      <ion-col class="ion-text-center" size="10">
+        <ion-item class="ion-text-center" lines="none">
+          <ion-label class="lastPosi">Letzte Positionen</ion-label>
+        </ion-item>
+      </ion-col>
+      <ion-col size="1"></ion-col>
+    </ion-row>
+  </ion-grid>
+  <div #map id="map"></div>
+
+  <div *ngIf="displayWin" class="win-container" @container>
+    <div class="pyro">
+      <div class="before"></div>
+      <div class="after"></div>
+      <div class="message">
+        <h1>{{winMessage}}</h1>
+      </div>
+    </div>
+  </div>
+</ion-content>

@@ -1,0 +1,97 @@
+{
+  "name": "Gelaendespiel_App",
+  "version": "0.0.1",
+  "author": "Ionic Framework",
+  "homepage": "https://ionicframework.com/",
+  "scripts": {
+    "ng": "ng",
+    "start": "ng serve",
+    "local": "ionic serve",
+    "build": "ng build",
+    "test": "ng test --progress false --watch true",
+    "lint": "ng lint",
+    "e2e": "ng e2e",
+    "karma": "ng test --watch=false --progress false",
+    "compodoc": "node dir.delete.js && compodoc -p tsconfig.json -w -s  --customLogo src/assets/Logo.png --disableRoutesGraph --name BearSteps_Dokumentation"
+  },
+  "private": true,
+  "dependencies": {
+    "@angular/animations": "^10.0.3",
+    "@angular/common": "^9.1.12",
+    "@angular/core": "^9.1.12",
+    "@angular/fire": "^6.0.2",
+    "@angular/forms": "^9.1.12",
+    "@angular/platform-browser": "^9.1.12",
+    "@angular/platform-browser-dynamic": "^9.1.12",
+    "@angular/router": "^9.1.12",
+    "@firebase/testing": "^0.20.6",
+    "@ionic-native/clipboard": "^5.27.0",
+    "@ionic-native/core": "^5.27.0",
+    "@ionic-native/google-maps": "^5.5.0",
+    "@ionic-native/splash-screen": "^5.27.0",
+    "@ionic-native/status-bar": "^5.27.0",
+    "@ionic/angular": "^5.2.3",
+    "angular-google-charts": "^1.1.4",
+    "cordova-android": "^8.1.0",
+    "cordova-clipboard": "^1.3.0",
+    "cordova-plugin-geolocation": "^4.0.2",
+    "cordova-plugin-googlemaps": "^2.7.1",
+    "firebase": "^7.16.0",
+    "ngx-countdown": "^10.0.0",
+    "rimraf": "^3.0.2",
+    "rxjs": "~6.5.1",
+    "tslib": "^1.10.0",
+    "zone.js": "~0.10.2"
+  },
+  "devDependencies": {
+    "@angular-devkit/build-angular": "^0.901.11",
+    "@angular/cli": "^9.1.11",
+    "@angular/compiler": "^9.1.12",
+    "@angular/compiler-cli": "^9.1.12",
+    "@angular/language-service": "^9.1.12",
+    "@ionic/angular-toolkit": "^2.1.1",
+    "@types/jasmine": "^3.5.11",
+    "@types/jasminewd2": "~2.0.3",
+    "@types/node": "^12.12.50",
+    "codelyzer": "^5.1.2",
+    "cordova-plugin-device": "2.0.2",
+    "cordova-plugin-ionic-keyboard": "^2.0.5",
+    "cordova-plugin-ionic-webview": "^4.0.0",
+    "cordova-plugin-splashscreen": "5.0.2",
+    "cordova-plugin-statusbar": "2.4.2",
+    "cordova-plugin-whitelist": "^1.3.4",
+    "jasmine-core": "~3.5.0",
+    "jasmine-spec-reporter": "~4.2.1",
+    "karma": "~5.0.0",
+    "karma-chrome-launcher": "^3.1.0",
+    "karma-coverage-istanbul-reporter": "~2.1.0",
+    "karma-jasmine": "~3.0.1",
+    "karma-jasmine-html-reporter": "^1.4.2",
+    "ngx-spec": "^2.1.4",
+    "protractor": "~5.4.3",
+    "ts-node": "~8.3.0",
+    "tslint": "~6.1.0",
+    "typescript": "~3.8.3"
+  },
+  "description": "An Ionic project",
+  "cordova": {
+    "plugins": {
+      "cordova-clipboard": {},
+      "cordova-plugin-whitelist": {},
+      "cordova-plugin-statusbar": {},
+      "cordova-plugin-device": {},
+      "cordova-plugin-splashscreen": {},
+      "cordova-plugin-ionic-webview": {
+        "ANDROID_SUPPORT_ANNOTATIONS_VERSION": "27.+"
+      },
+      "cordova-plugin-ionic-keyboard": {},
+      "cordova-plugin-geolocation": {},
+      "cordova-plugin-googlemaps": {
+        "API_KEY_FOR_ANDROID": ""
+      }
+    },
+    "platforms": [
+      "android"
+    ]
+  }
+}

@@ -1,0 +1,111 @@
+<ion-header>
+    <ion-toolbar color="dark">
+        <ion-buttons slot="start">
+            <ion-button><ion-icon name="log-out" color="dark"></ion-icon></ion-button>
+        </ion-buttons>
+        <ion-title class="ion-text-center ion-text-uppercase">
+            Home
+        </ion-title>
+        <ion-buttons slot="end">
+            <ion-button (click)="presentConfirm()">
+                <ion-icon name="log-out"></ion-icon>
+            </ion-button>
+        </ion-buttons>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <div class="style"></div>
+    <ion-grid>
+            <ion-card>
+                <ion-card-content>
+                    <ion-row class="profileBox ion-text-center ion-align-items-center">
+                        <ion-col>
+                            <img *ngIf="picture == null"  (click)="changeAvatar()" class="placeholderImg" src="../../assets/avatar/no-avatar.png" alt="noAvatar"/>
+                            <img *ngIf="mail !== null && picture !== null" (click)="changeAvatar()" class="placeholderImg" src="../../assets/avatar/{{picture}}.png" alt="avatarPic"/>
+                        </ion-col>
+                    </ion-row>
+                    <ion-row>
+                        <ion-col class="ion-text-center">
+                            <p class="title">
+                                <ion-label id="welcomeMsg">{{welcomeMessage}} {{this.username}}</ion-label>
+                            </p>
+                            <div *ngIf="this.mail">
+                                <p class="mailText">
+                                    {{this.mail}}
+                                </p>
+                                <p>
+                                    <ion-button (click)="changeAvatar()" size="small" color="dark">Avatar ändern</ion-button>
+                                </p>
+                                <p class="rankText">
+                                    {{this.rank}}
+                                </p>
+                            </div>
+                        </ion-col>
+                    </ion-row>
+                    <ion-row class="ion-text-center" *ngIf="this.mail">
+                            <ion-col class="shadow" size="5" (click)="navigateAchievments()">
+                                <span class="subText">Erfolge</span>
+                                <p>{{this.achievPoints}}</p>
+                                <span class="subText">Punkte</span>
+                            </ion-col>
+                        <ion-col>
+                        </ion-col>
+                            <ion-col class="shadow" size="5" (click)="goStats()">
+                                <span class="subText">Statistik</span>
+                                <p>{{this.gamesWon}}</p>
+                                <span class="subText">Siege</span>
+                            </ion-col>
+                    </ion-row>
+                </ion-card-content>
+            </ion-card>
+            <ion-row class="ion-text-center">
+                <ion-col size="6">
+                    <button class="btn" (click)="createGame()" *ngIf="this.mail">
+                        <span>Spiel erstellen</span>
+                    </button>
+                    <button class="btn" disabled="disabled" (click)="createGame()" *ngIf="!this.mail">
+                        <span>Spiel erstellen</span>
+                    </button>
+                </ion-col>
+                <ion-col size="6">
+                    <button class="btn" (click)="joinGame()"><span>Spiel beitreten</span></button>
+                </ion-col>
+            </ion-row>
+    </ion-grid>
+
+    <div *ngIf="displayAchievement" class="win-container" @container>
+        <div class="pyro">
+            <div class="before"></div>
+            <div class="after"></div>
+            <h1 class="message">Glückwunsch!</h1>
+            <h3 class="message">{{this.achMessage}}</h3>
+            <ion-row class="achCol" *ngFor="let achievement of this.achievements">
+                <ion-col>
+                    <ion-row>
+                        <ion-col  class="center">
+                            <img class="center img" src="../../assets/achievements/{{achievement.img}}.png"
+                                 alt="avatar-{{achievement.img}}"/>
+                        </ion-col>
+                    </ion-row>
+                    <ion-row>
+                        <ion-col class="ion-text-center">
+                            <div>
+                                <div class="message ">
+                                    <h2>{{achievement.title}}</h2></div>
+                                <div class="message">
+                                    <ion-text>{{achievement.description}}</ion-text>
+                                </div>
+                                <div class="message points">
+                                    <ion-text>{{achievement.points}} Punkte</ion-text>
+                                </div>
+                            </div>
+                        </ion-col>
+
+                    </ion-row>
+                </ion-col>
+            </ion-row>
+
+        </div>
+    </div>
+</ion-content>

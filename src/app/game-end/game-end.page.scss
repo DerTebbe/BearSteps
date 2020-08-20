@@ -1,0 +1,243 @@
+@import "src/global";
+
+#map {
+  height: 50%;
+}
+
+ion-content {
+  --background: url("../../assets/Backgrounds/TreesBg.png");
+  --background-repeat: no-repeat;
+  --background-position: bottom;
+  --background-size: cover;
+  height: 100%;
+}
+
+ion-title {
+  font-family: "Fira Sans Condensed", serif;
+  font-size: 25px;
+}
+
+ion-item {
+  --background: opacity(0.9) !important;
+}
+
+p {
+  font-family: Oswald, serif;
+  font-size: 22px !important;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: $black;
+}
+
+ion-label, ion-icon {
+  font-family: Dosis !important;
+  color: $white !important;
+}
+
+.lastPosi {
+  text-transform: uppercase;
+  font-family: Oswald, serif !important;
+  font-size: 20px !important;
+  color: $white !important;
+}
+
+.winner {
+  width: 50%;
+  border-radius: 1px solid $black;
+}
+
+.message {
+  margin-left: 10%;
+  margin-right: 10%;
+  color: #9d9fa6;
+  text-align: center;
+}
+
+.win-container {
+  z-index: 1000;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.92);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+// FIrework Animation starts here
+
+$particles: 50;
+$width: 500;
+$height: 500;
+
+// Create the explosion...
+$box-shadow: ();
+$box-shadow2: ();
+@for $i from 0 through $particles {
+  $box-shadow: $box-shadow,
+  random($width)-$width / 2 + px random($height)-$height / 1.2 + px hsl(random(360), 100, 50);
+  $box-shadow2: $box-shadow2, 0 0 #fff
+}
+
+@mixin keyframes($animationName) {
+  @-webkit-keyframes #{$animationName} {
+    @content;
+  }
+
+  @-moz-keyframes #{$animationName} {
+    @content;
+  }
+
+  @-o-keyframes #{$animationName} {
+    @content;
+  }
+
+  @-ms-keyframes #{$animationName} {
+    @content;
+  }
+
+  @keyframes #{$animationName} {
+    @content;
+  }
+}
+
+@mixin animation-delay($settings) {
+  -moz-animation-delay: $settings;
+  -webkit-animation-delay: $settings;
+  -o-animation-delay: $settings;
+  -ms-animation-delay: $settings;
+  animation-delay: $settings;
+}
+
+@mixin animation-duration($settings) {
+  -moz-animation-duration: $settings;
+  -webkit-animation-duration: $settings;
+  -o-animation-duration: $settings;
+  -ms-animation-duration: $settings;
+  animation-duration: $settings;
+}
+
+@mixin animation($settings) {
+  -moz-animation: $settings;
+  -webkit-animation: $settings;
+  -o-animation: $settings;
+  -ms-animation: $settings;
+  animation: $settings;
+}
+
+@mixin transform($settings) {
+  transform: $settings;
+  -moz-transform: $settings;
+  -webkit-transform: $settings;
+  -o-transform: $settings;
+  -ms-transform: $settings;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: #000;
+  overflow: hidden;
+}
+
+.pyro > .before, .pyro > .after {
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  box-shadow: $box-shadow2;
+  @include animation((1s bang ease-out infinite backwards, 1s gravity ease-in infinite backwards, 5s position linear infinite backwards));
+}
+
+.pyro > .after {
+  @include animation-delay((1.25s, 1.25s, 1.25s));
+  @include animation-duration((1.25s, 1.25s, 6.25s));
+}
+
+@include keyframes(bang) {
+  to {
+    box-shadow: $box-shadow;
+  }
+}
+
+@include keyframes(gravity) {
+  to {
+    @include transform(translateY(200px));
+    opacity: 0;
+  }
+}
+
+@include keyframes(position) {
+  0%, 19.9% {
+    margin-top: 10%;
+    margin-left: 40%;
+  }
+  20%, 39.9% {
+    margin-top: 40%;
+    margin-left: 30%;
+  }
+  40%, 59.9% {
+    margin-top: 20%;
+    margin-left: 70%
+  }
+  60%, 79.9% {
+    margin-top: 30%;
+    margin-left: 20%;
+  }
+  80%, 99.9% {
+    margin-top: 30%;
+    margin-left: 80%;
+  }
+}
+
+// rain animation
+
+html {
+  height: 100%;
+}
+
+
+.rain {
+  background: white;
+  background: linear-gradient(to bottom, rgba(255,255,255,0) 0%, #ffffff 100%);
+  height: 50px;
+  position: absolute;
+  width: 1px;
+}
+
+
+$rain: 50;
+
+@for $i from 1 through $rain {
+  $top: (random(50) + 50) * 1%;
+  $left: random(100) * 1%;
+  $opacity: (random(30) + 30) * 0.01;
+  $delay: random(20) - 1s;
+
+  .rain:nth-of-type(#{$i}) {
+    animation-name: rain-#{$i};
+    animation-delay: $delay;
+    animation-duration: random(6) + 4s;
+    animation-iteration-count: infinite;
+    left: $left;
+    opacity: $opacity;
+    top: -$top;
+  }
+
+
+  @Keyframes rain-#{$i} {
+    from {
+      left: $left;
+      opacity: $opacity;
+      top: -$top;
+    }
+    to {
+      opacity: 0;
+      top: $top + 40%;
+    }
+  }
+}
+

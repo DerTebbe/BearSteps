@@ -1,0 +1,16 @@
+<ion-header>
+    <ion-toolbar color="dark">
+        <ion-title class="ion-text-center ion-text-uppercase" >Spiel abbrechen?</ion-title>
+    </ion-toolbar>
+</ion-header>
+<ion-content>
+    <ion-grid>
+        <p class="ion-text-center">Willst du wirklich das Spiel abbrechen?</p>
+        <ion-row>
+            <ion-col class="ion-text-center">
+                <ion-button color="dark" (click)=" modalcontroller.dismiss(true)">Ja</ion-button>
+                <ion-button color="danger shade" (click)="modalcontroller.dismiss(false)">Nein</ion-button>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+</ion-content>

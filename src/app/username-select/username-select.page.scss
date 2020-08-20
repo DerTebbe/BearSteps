@@ -1,0 +1,50 @@
+@import "../../global";
+
+ion-title {
+  font-family: "Fira Sans Condensed";
+  font-size: 20px;
+}
+
+p {
+  font-family: Dosis;
+  font-size: 17px !important;
+}
+
+ion-input {
+  border: 1px solid $black !important;
+}
+
+ion-grid {
+ margin-top: 42% !important;
+}
+
+
+.error-message {
+  font-size: small;
+  color: $light-orange;
+}
+
+.info {
+  font-size: small;
+}
+
+.usernameInput {
+  border: 2px solid $grey;
+  border-radius: 7px;
+}
+
+.style {
+  background-image: url("../../assets/Backgrounds/RegisterBG.png");
+  opacity: 80%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  -webkit-filter: blur(8px);
+  -moz-filter: blur(8px);
+  -o-filter: blur(8px);
+  -ms-filter: blur(8px);
+  filter: blur(8px);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}

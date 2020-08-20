@@ -1,0 +1,53 @@
+<ion-header>
+    <ion-toolbar color="dark">
+        <ion-buttons slot="start">
+            <ion-icon size="large" color="dark" name="close-outline"></ion-icon>
+        </ion-buttons>
+        <ion-title class="ion-text-center">LOBBY</ion-title>
+        <ion-buttons slot="end">
+            <ion-icon size="large" (click)="openExit()" name="close-outline"></ion-icon>
+        </ion-buttons>
+    </ion-toolbar>
+</ion-header>
+<ion-content>
+    <ion-grid>
+        <div class="player ion-text-right">{{playerLength}}/{{maxMember}} Spieler </div>
+        <ion-item *ngFor="let player of room.players" class="card-center">
+            <ion-thumbnail slot="start">
+                <img *ngIf="player.picture" class="placeholderImg" src="../../assets/avatar/{{player.picture}}.png" alt="avatarPic"/>
+                <img *ngIf="!player.picture" src="../../assets/avatar/no-avatar.png" alt="noAvatarPic"/>
+            </ion-thumbnail>
+            <ion-label class="ion-text-center player">
+                <h2>{{player.username}}</h2>
+                <span *ngIf="room.creator.id == user.id && player.id == user.id">Du bist der Anführer!</span>
+                <p class="rankPlayer" *ngIf="player.email">
+                    {{player.rank}}
+                </p>
+                <p *ngIf="!player.email">
+                    Gastspieler
+                </p>
+                <div class="ion-text-end  remBtn">
+                    <button *ngIf="room.creator.id == user.id && player.id != user.id" class="remove"
+                            (click)="kickPlayer(player.id)">X
+                    </button>
+                </div>
+            </ion-label>
+        </ion-item>
+        <ion-button *ngIf="room.maxAmountPlayers !== playerLength" class="invite" expand="full" color="dark" (click)="showAlertInviteCode()">Einladen</ion-button>
+    </ion-grid>
+
+    <ion-fab *ngIf="room && user" slot="fixed" vertical="bottom" horizontal="center">
+        <ion-fab-button *ngIf="room.creator.id == user.id && playerLength !== maxMember" (click)="startGame()"
+                        color="primary">
+            <ion-icon class="gameBtn" name="caret-forward-outline"></ion-icon>
+        </ion-fab-button>
+    </ion-fab>
+    <ion-fab *ngIf="room && user" slot="fixed" vertical="bottom" horizontal="center">
+        <ion-fab-button *ngIf="room.creator.id == user.id && playerLength == maxMember" (click)="startGame()"
+                        color="primary">
+            <ion-icon class="blink" name="caret-forward-outline"
+                      *ngIf="this.playerLength == this.maxMember"></ion-icon>
+        </ion-fab-button>
+    </ion-fab>
+
+</ion-content>

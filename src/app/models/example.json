@@ -1,0 +1,33 @@
+{
+  "Room": {
+    "id": "fdgsf815aef865adsf",
+    "maxAmountPlayers": 5,
+    "players": [
+      {
+        "id": "adf5af18e61ghre86",
+        "username": "DerTebbe",
+        "email": "felix.tebbe@mni.thm.de",
+        "password": "123456"
+      },
+      {
+        "id": "dfg268sga6erg585d",
+        "username": "niklas23",
+        "email": "niklas.schmitt@mni.thm.de",
+        "password": "qwertz"
+      },
+      {
+        "id": "hzdetsv5gs464g1se",
+        "username": "Alatariel"
+      },
+      {
+        "id": "sa6f4e61fea68wef",
+        "username": "Synox"
+      }
+    ],
+    "game": {
+      "gameName": "Räuber und Gendarm"
+    },
+    "roomName": "Die coolen Kids spielen Geländespiele!",
+    "password": "1234"
+  }
+}

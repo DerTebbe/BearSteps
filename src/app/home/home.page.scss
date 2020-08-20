@@ -1,0 +1,157 @@
+@import "src/global";
+
+.placeholderImg {
+  height: 125px;
+  width: 125px;
+}
+
+
+/** gradient background **/
+@keyframes Gradient {
+  0% {
+    background-position: 0 50%
+  }
+  50% {
+    background-position: 100% 50%
+  }
+  100% {
+    background-position: 0 50%
+  }
+}
+
+.style {
+  background-image:  url("../../assets/Backgrounds/homePic.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+
+ion-title {
+  font-family: "Fira Sans Condensed";
+  font-size: 25px;
+}
+
+ion-card {
+  background-color: $white;
+  color: $black;
+  box-shadow: $black;
+  opacity: 90%;
+}
+
+ion-button{
+  opacity: 100 !important;
+}
+
+
+#welcomeMsg {
+  font-family: Oswald;
+  text-transform: uppercase;
+  font-size: 23px;
+  font-weight: bold;
+}
+
+.alertPop .alert-wrapper {
+  --background: blue($black-hover-dark);
+}
+
+.welcomeDiv {
+  margin-top: 5%;
+}
+
+.btn {
+  font-family: Oswald;
+  font-size: 23px;
+  text-autospace: ideograph-alpha;
+  text-transform: uppercase;
+  border: 1px solid $grey;
+  color: $white;
+  background-color: $black;
+  height: 155px;
+  width: 170px;
+  border-radius: 9%;
+}
+
+.mailText {
+  font-family: Dosis;
+  font-size: 18px;
+  color: $black;
+}
+
+.rankText {
+  font-family: Dosis;
+  font-style: italic;
+  color: $black;
+  font-size: 15px;
+}
+
+.subText {
+  font-family: Dosis;;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+.btn:disabled {
+  opacity: 50%;
+}
+
+.shadow {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.message {
+  margin-left: 10%;
+  margin-right: 10%;
+  color: #9d9fa6;
+  text-align: center;
+}
+
+.win-container {
+  z-index: 1000;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.92);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.img {
+  width: 30%;
+  height: auto;
+}
+
+.center {
+  align-content: center;
+  text-align: center;
+}
+
+.start {
+  text-align: start;
+}
+
+.end {
+  text-align: end;
+}
+
+.achMessage {
+    font-family: Oswald;
+    text-transform: uppercase;
+    font-size: 23px;
+    font-weight: bold;
+}
+
+.points {
+  margin-top: 2%;
+}
+
+.achCol {
+  margin-top: 4%;
+}

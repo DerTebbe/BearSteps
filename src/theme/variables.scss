@@ -1,0 +1,88 @@
+// Ionic Variables and Theming. For more info, please see:
+// http://ionicframework.com/docs/theming/
+@import "../global";
+/** Ionic CSS Variables **/
+:root {
+  /** primary **/
+  --ion-color-primary: #E0E0E0;
+  --ion-color-primary-rgb: 215,217,215;
+  --ion-color-primary-contrast: #253031;
+  --ion-color-primary-contrast-rgb: 37,48,49;
+  --ion-color-primary-shade: #cacdca;
+  --ion-color-primary-tint: #f1f2f1;
+
+  /** secondary **/
+  --ion-color-secondary: #048B8B;
+  --ion-color-secondary-rgb: 66,97,96;
+  --ion-color-secondary-contrast: #F8F7FF;
+  --ion-color-secondary-contrast-rgb: 248,247,255;
+  --ion-color-secondary-shade: #385251;
+  --ion-color-secondary-tint: #577f7e;
+
+  /** tertiary **/
+  --ion-color-tertiary: #FFB35C;
+  --ion-color-tertiary-rgb: 255,197,153;
+  --ion-color-tertiary-contrast: #253031;
+  --ion-color-tertiary-contrast-rgb: 37,48,49;
+  --ion-color-tertiary-shade: #ffb780;
+  --ion-color-tertiary-tint: #ffe2cc;
+
+  /** success **/
+  --ion-color-success: #2dd36f;
+  --ion-color-success-rgb: 45, 211, 111;
+  --ion-color-success-contrast: #ffffff;
+  --ion-color-success-contrast-rgb: 255, 255, 255;
+  --ion-color-success-shade: #28ba62;
+  --ion-color-success-tint: #42d77d;
+
+  /** warning **/
+  --ion-color-warning: #ffc409;
+  --ion-color-warning-rgb: 255, 196, 9;
+  --ion-color-warning-contrast: #000000;
+  --ion-color-warning-contrast-rgb: 0, 0, 0;
+  --ion-color-warning-shade: #e0ac08;
+  --ion-color-warning-tint: #ffca22;
+
+  /** danger **/
+  --ion-color-danger: #CF3C4F;
+  --ion-color-danger-rgb: 235, 68, 90;
+  --ion-color-danger-contrast: #ffffff;
+  --ion-color-danger-contrast-rgb: 255, 255, 255;
+  --ion-color-danger-shade: #cf3c4f;
+  --ion-color-danger-tint: #ed576b;
+
+  /** dark **/
+  --ion-color-dark: #253031;
+  --ion-color-dark-rgb: 37,48,49;
+  --ion-color-dark-contrast: #F8F7FF;
+  --ion-color-dark-contrast-rgb: 248,247,255;
+  --ion-color-dark-shade: #1A2222;
+  --ion-color-dark-tint: #3B4C4E;
+
+  /** medium **/
+  --ion-color-medium: #92949c;
+  --ion-color-medium-rgb: 146, 148, 156;
+  --ion-color-medium-contrast: #ffffff;
+  --ion-color-medium-contrast-rgb: 255, 255, 255;
+  --ion-color-medium-shade: #808289;
+  --ion-color-medium-tint: #9d9fa6;
+
+  /** light **/
+  --ion-color-light: #F8F7FF;
+  --ion-color-light-rgb: 248,247,255;
+  --ion-color-light-contrast: #253031;
+  --ion-color-light-contrast-rgb: 37,48,49;
+  --ion-color-light-shade: #f4f2ff;
+  --ion-color-light-tint: #ffffff;
+
+  // Class in Alert-PopUps to change color of buttons
+  .dark
+  {
+    color: $black !important;
+  }
+
+  ion-select .okText {
+    color: $black !important;
+  }
+}
+

@@ -1,0 +1,27 @@
+<ion-header>
+    <ion-toolbar color="dark">
+        <ion-back-button slot="start"></ion-back-button>
+        <ion-title class="ion-text-center ion-text-uppercase">Username festlegen</ion-title>
+    </ion-toolbar>
+</ion-header>
+<ion-content class="ion-align-items-center">
+    <div class="style"></div>
+    <ion-grid>
+        <ion-row class="ion-justify-content-center">
+            <ion-col size="2"></ion-col>
+            <ion-col size="8">
+                <p class="info ion-text-center">Bitte gib einen Username ein unter dem du an einem Spiel teilnehmen
+                    möchtest!</p>
+                    <ion-input lines="none" class="usernameInput ion-text-center" type="text" placeholder="Username" required
+                               [(ngModel)]="user.username"></ion-input>
+                    <p class="error-message" *ngIf="errorMessage != ''">{{errorMessage}}</p>
+            </ion-col>
+            <ion-col size="2">
+            </ion-col>
+        </ion-row>
+        <div class="ion-text-center">
+            <ion-button color="dark" (click)="submit()">Bestätigen</ion-button>
+        </div>
+    </ion-grid>
+
+</ion-content>

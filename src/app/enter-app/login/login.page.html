@@ -1,0 +1,49 @@
+<ion-content>
+    <ion-grid>
+        <div class="style"></div>
+        <ion-button id="button" color="secondary-contrast" (click)="home()">
+            <ion-icon name="arrow-back-outline"></ion-icon>
+        </ion-button>
+        <div class="content">
+            <h2 class="welcome ion-text-center ion-text-uppercase">Willkommen! Welcome! Bienvenue!</h2>
+            <form class="form" [formGroup]="validationsForm" (ngSubmit)="login(email,password)">
+                <ion-item class="background-input">
+                    <ion-label position="floating" color="primary">E-Mail</ion-label>
+                    <ion-input type="text" formControlName="email" #email required=""></ion-input>
+                </ion-item>
+                <div class="validation-errors">
+                    <ng-container *ngFor="let validation of validationMessages.email">
+                        <div class="error-message"
+                             *ngIf="validationsForm.get('email').hasError(validation.type) && (validationsForm.get('email').dirty || validationsForm.get('email').touched)">
+                            {{ validation.message }}
+                        </div>
+                    </ng-container>
+                </div>
+                <ion-item>
+                    <ion-label position="floating" color="primary">Password</ion-label>
+                    <ion-input type="password" formControlName="password" class="form-control" #password
+                               required></ion-input>
+                </ion-item>
+                <div class="validation-errors">
+                    <ng-container *ngFor="let validation of validationMessages.password">
+                        <div class="error-message"
+                             *ngIf="validationsForm.get('password').hasError(validation.type) && (validationsForm.get('password').dirty || validationsForm.get('password').touched)">
+                            {{ validation.message }}
+                        </div>
+                    </ng-container>
+                </div>
+                <ion-row>
+                    <ion-col>
+                        <ion-button type="submit" class="sumbit-btn login button" expand="full" color="dark"
+                                    [disabled]="!validationsForm.valid"
+                                    (click)="login(email, password)">Login
+                        </ion-button>
+                    </ion-col>
+                </ion-row>
+            </form>
+            <div class="ion-text-center">
+                <label class="Merror-message">{{errorMessage}}</label>
+            </div>
+        </div>
+    </ion-grid>
+</ion-content>

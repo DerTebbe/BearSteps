@@ -1,0 +1,34 @@
+@import "src/global";
+
+ion-title {
+  font-family: "Fira Sans Condensed", serif;
+  font-size: 23px;
+}
+
+h2 {
+  font-family: Oswald, serif;
+  color: $black;
+  font-weight: bold;
+}
+
+
+h3, p {
+  font-family: Dosis, serif;
+  color: $black;
+
+}
+
+
+a {
+  color: #0c5593;
+}
+
+span {
+  font-family: Dosis, serif;
+  font-size: 10px;
+
+  b {
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+}

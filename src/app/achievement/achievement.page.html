@@ -1,0 +1,61 @@
+<ion-header>
+    <ion-toolbar color="dark">
+        <ion-back-button slot="start"></ion-back-button>
+        <ion-title class="ion-text-center ion-text-uppercase">Erfolge</ion-title>
+        <ion-buttons slot="end">
+            <ion-button>
+                <ion-icon name="log-out" color="dark"></ion-icon>
+            </ion-button>
+        </ion-buttons>
+    </ion-toolbar>
+    <div class="ion-align-items-center ion-text-center">
+        <div class="ribbon">
+            <div class="ribbon-stitches-top"></div>
+            <div class="ribbon-content"><p>{{this.rank}}</p></div>
+            <div class="ribbon-stitches-bottom"></div>
+        </div>
+    </div>
+</ion-header>
+
+<ion-content>
+    <div class="style"></div>
+    <div class="marginDiv"></div>
+    <ion-grid>
+        <ion-grid *ngIf="!displayAch">
+            <ion-row class="centerrow ion-text-center">
+                <ion-col>
+                    <p class="no-achieves">Du hast leider noch keine Erfolge verdient!</p>
+                </ion-col>
+            </ion-row>
+        </ion-grid>
+        <h4 class="message small">{{this.achpoints}} Punkte</h4>
+
+        <ion-item class="achievement-col" *ngFor="let achievement of achievements" color="dark">
+            <ion-thumbnail slot="start">
+                <img src="../../assets/achievements/{{achievement.img}}.png" alt="avatar-{{achievement.img}}"/>
+            </ion-thumbnail>
+            <ion-label>
+                <ion-row>
+                    <ion-col class="ion-text-start">
+                        <h2 class="title">{{achievement.title}}</h2>
+                    </ion-col>
+                    <ion-col class="ion-text-end">
+                        <h2 class="title bold">{{achievement.points}}</h2>
+                    </ion-col>
+                </ion-row>
+                <ion-row>
+                    <ion-col>
+                        <div class="ion-text-start ion-text-wrap">
+                            <p>{{achievement.description}}</p>
+                        </div>
+                    </ion-col>
+                </ion-row>
+                <ion-row>
+                    <ion-col class="ion-text-start">
+                        <p class="smalltext">Errungen: {{achievement.date}}</p>
+                    </ion-col>
+                </ion-row>
+            </ion-label>
+        </ion-item>
+    </ion-grid>
+</ion-content>

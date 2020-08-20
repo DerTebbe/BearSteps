@@ -1,0 +1,172 @@
+@import "../../global";
+
+ion-title {
+  font-family: "Fira Sans Condensed", serif;
+  font-size: 25px;
+}
+
+h2 {
+  font-size: 20px;
+  font-family: Oswald, serif;
+  font-weight: bold;
+  color: $white !important;
+}
+
+
+p {
+  font-family: Dosis, serif;
+  margin-top: 2%;
+  margin-bottom: 2%;
+}
+
+ion-col {
+  padding: 0 !important;
+}
+
+ion-item {
+  opacity: 85%;
+}
+
+.style {
+  background-image:  url("../../assets/statistic/backgroundStat.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.marginDiv {
+margin-top: 30%;
+}
+
+.btnBack{
+  margin-left: -2%;
+}
+
+.centerrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.smalltext {
+  font-size: 0.8rem;
+  color: $white;
+  opacity: 0.7;
+}
+
+.bold {
+  font-weight: bold;
+  color: $black;
+}
+
+
+.message {
+  font-family: Oswald;
+  text-transform: uppercase;
+  font-size: 23px;
+  font-weight: bold;
+  margin-left: 10%;
+  margin-right: 10%;
+  text-align: center;
+}
+
+.small {
+  margin-top: -1.5%;
+  font-size: 0.95rem;
+}
+
+
+// This is all the ribbon-styling that is necessary to style it!!!
+.ribbon {
+  width: 75%;
+  position: absolute;
+  text-align: center;
+  font-size: 19px !important;
+  margin: 5% 19% 10% 12%;
+  background: #253031;
+  background: -webkit-gradient(linear, left top, left bottom, from(#253031), to(#252035));
+  background: -webkit-linear-gradient(top, #253031, #253031);
+  background: -moz-linear-gradient(top, #253031, #253031);
+  background: -ms-linear-gradient(top, #253031, #253031);
+  background: -o-linear-gradient(top, #253031, #253031);
+  background-image: -ms-linear-gradient(top, #253031 0%, #253031 100%);
+  -webkit-box-shadow: rgba(0, 0, 0, 0.3) 0 1px 1px;
+  -moz-box-shadow: rgba(0, 0, 0, 0.3) 0 1px 1px;
+  box-shadow: rgba(0, 0, 0, 0.3) 0 1px 1px;
+  font-family: Oswald, sans-serif;
+}
+
+.ribbon p {
+  font-size: 25px !important;
+  font-family: Oswald, serif !important;
+  color: #FFFFFF;
+  text-shadow: $grey 0 1px 0;
+  margin: 0;
+  padding: 15px 10px;
+}
+
+.ribbon:before, .ribbon:after {
+  content: '';
+  position: absolute;
+  display: block;
+  bottom: -1em;
+  border: 1.5em solid #253031;
+  z-index: -1;
+}
+
+.ribbon:before {
+  left: -2em;
+  border-right-width: 1.5em;
+  border-left-color: transparent;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.4) 1px 1px 1px;
+  -moz-box-shadow: rgba(0, 0, 0, 0.4) 1px 1px 1px;
+  box-shadow: rgba(0, 0, 0, 0.4) 1px 1px 1px;
+}
+
+.ribbon:after {
+  right: -2em;
+  border-left-width: 1.5em;
+  border-right-color: transparent;
+  -webkit-box-shadow: rgba(0,0,0,0.4) -1px 1px 1px;
+  -moz-box-shadow: rgba(0,0,0,0.4) -1px 1px 1px;
+  box-shadow: rgba(0,0,0,0.4) -1px 1px 1px;
+}
+
+.ribbon .ribbon-content:before, .ribbon .ribbon-content:after {
+  border-color: #668487 transparent transparent transparent;
+  position: absolute;
+  display: block;
+  border-style: solid;
+  bottom: -1em;
+  content: '';
+}
+
+.ribbon .ribbon-content:before {
+  left: 0;
+  border-width: 1em 0 0 1em;
+}
+
+.ribbon .ribbon-content:after {
+  right: 0;
+  border-width: 1em 1em 0 0;
+}
+
+.ribbon-stitches-top {
+  margin-top: 2px;
+  border-top: 1px dashed rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 2px rgba(255, 255, 255, 0.5);
+}
+
+.ribbon-stitches-bottom {
+  margin-bottom: 2px;
+  border-top: 1px dashed rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0 0 2px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 0 0 2px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 2px rgba(255, 255, 255, 0.3);
+}
+

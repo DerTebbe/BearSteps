@@ -1,0 +1,107 @@
+@import "src/global";
+
+@-webkit-keyframes 'slide' {
+  0% {
+    background-position-x: 0%;
+  }
+  100% {
+    background-position-x: 100%;
+  }
+}
+
+ion-title {
+  font-family: "Fira Sans Condensed";
+  font-size: 25px;
+}
+
+ion-grid {
+  display: block;
+  vertical-align: middle;
+}
+
+ion-label {
+  font-family: Oswald, serif !important;
+}
+
+.labelText {
+  font-size: 18px !important;
+}
+
+.amountText {
+  font-family: Dosis, serif;
+}
+
+.curved {
+  background: $black;
+  color: white;
+  text-align: center;
+  margin-top: 0;
+  height: 33%;
+  position: relative;
+  background: url("../../assets/Backgrounds/GamePic.png");
+  background-position-x: 0%;
+  -webkit-animation: 'slide' 60s infinite linear forwards;
+}
+
+.curved:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border-top: 15px solid $black;
+  width: 100%;
+}
+
+.curved:hover:before {
+  left: -50%;
+  transform: skewX(-5deg);
+}
+
+.top {
+  margin-top: 5%;
+}
+
+.curved h1 {
+  margin-top: 20%;
+}
+
+.curved p {
+  margin: 0 5rem 0 5rem;
+}
+
+.start-game {
+  box-shadow: 0px 14px 25px rgba(0, 0, 0, 0.59);
+  border-radius: 50%;
+}
+
+.header {
+  font-family: Oswald;
+  font-size: 25px;
+}
+
+.text {
+  font-family: Dosis;
+  font-size: 13px;
+}
+
+.ion-toolbar {
+  border-radius: 20px !important;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 5px;
+  padding-top: 5px;
+}
+
+.error {
+  color: #f04141;
+}
+
+.center {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+ion-label {
+  margin-top: 10px
+}

@@ -1,0 +1,41 @@
+<ion-header>
+    <ion-toolbar color="dark">
+        <ion-buttons slot="start">
+            <ion-icon size="large" color="dark" name="close-outline"></ion-icon>
+        </ion-buttons>
+        <ion-title class="ion-text-center ion-text-uppercase">Spielinfo</ion-title>
+        <ion-buttons slot="end">
+            <ion-icon size="large" (click)="modalcontroller.dismiss()" name="close-outline"></ion-icon>
+        </ion-buttons>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-grid>
+        <ion-row class="ion-align-items-center">
+            <div class="line">
+                <ion-col class="ion-text-center" size="12">
+                    <h2>Finde  Mr.  X!</h2>
+                    <p>Mr. X hat zu Beginn einen kleinen Vorsprung! <br>In dieser Zeit können sich die Detektive koordinieren. Findet ihn, ehe die Zeit abläuft, oder er gewinnt das Spiel!</p>
+                </ion-col>
+            </div>
+            <ion-col class="ion-text-center" size="12">
+                <h2>Rollen</h2>
+            </ion-col>
+            <ion-col size="4">
+                <img class="thief" src="../../assets/statistic/mrxStat.png">
+            </ion-col>
+            <ion-col class="ion-text-center" size="8">
+                <p>Als Mr. X musst du zu Beginn des Spiels ein Geheimwort festlegen. Halte dich bedeckt und lass
+                    dich nicht erwischen, um zu gewinnen! Wirst du gefunden, musst du das Geheimwort teilen.</p>
+            </ion-col>
+            <ion-col class="ion-text-center" size="8">
+                <p>Als Detektiv begibst du dich auf die Suche nach Mr. X. Dabei hast du dein Team auf deiner Seite, um
+                    ihn einkesseln zu können. Gib das Geheimwort von Mr.X ein, wenn du ihn gefunden hast!</p>
+            </ion-col>
+            <ion-col size="4">
+                <img src="../../assets/statistic/detective.png">
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+</ion-content>

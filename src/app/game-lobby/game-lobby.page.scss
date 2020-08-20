@@ -1,0 +1,116 @@
+@import "../../global";
+
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}
+
+ion-title {
+  font-family: "Fira Sans Condensed", serif;
+  font-size: 25px;
+}
+
+span {
+  color: $light-orange;
+  font-family: Dosis, serif;
+  font-size: 16px;
+  font-weight: bold;
+  margin-top: 5% !important;
+}
+
+ion-card-title {
+  font-family: Oswald, serif;
+  font-size: 28px;
+  color: $black;
+  margin-top: 3.5%;
+}
+
+ion-card-content {
+  font-family: Dosis, serif;
+  font-weight: bold;
+  color: $black;
+}
+
+ion-item {
+  border-bottom: 0.5px solid black;
+  border-radius: 10px;
+  background-color: $grey !important;
+  margin-top: 3% !important;
+}
+
+ion-grid {
+  background-image: url("../../assets/Backgrounds/TreesBg.png");
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: cover;
+  height: 100%;
+}
+
+ion-label {
+  color: $black !important;
+}
+
+.rankPlayer {
+  font-size: 12px;
+}
+
+.gameBtn {
+  font-size: 45px;
+  position: absolute;
+  vertical-align: middle;
+  display: block;
+  margin-left: 5%;
+  color: $light-orange;
+}
+
+.blink {
+  font-size: 45px;
+  position: absolute;
+  vertical-align: middle;
+  display: block;
+  margin-left: 5%;
+  animation: blinker 2s linear infinite;
+  color: $blue;
+}
+
+
+.remove {
+  font-family: Oswald, serif;
+  font-size: 15px;
+  text-autospace: ideograph-alpha;
+  text-transform: uppercase;
+  border: 0.5px groove $white;
+  color: $white;
+  background-color: #CF3C4F;
+  height: 25px;
+  width: 25px;
+  border-radius: 9%;
+}
+
+.card-center {
+  width: 90%; // adjust width on your ion-card suitable on your screen
+  display: block;
+  margin: 0 auto;
+}
+
+.invite {
+  margin-top: 5%;
+}
+
+.remBtn {
+  position: absolute;
+  top: 7%;
+  right: 2%
+}
+
+.item ion-thumbnail {
+  min-width: 5rem;
+  min-height: 5rem;
+
+  img {
+    max-width: 5rem;
+    min-width: 5rem;
+  }
+}
+

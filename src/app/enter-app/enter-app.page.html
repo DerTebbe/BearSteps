@@ -1,0 +1,36 @@
+<ion-content>
+    <div class="style"></div>
+        <ion-grid no-padding>
+            <ion-row class="top">
+                <ion-col size="12" text-center>
+                </ion-col>
+            </ion-row>
+            <ion-row class="mid">
+                <ion-col size="12" text-center>
+                    <img src="../../assets/Logo.png">
+                </ion-col>
+            </ion-row>
+        </ion-grid>
+    <br/><br/>
+            <ion-row>
+                <ion-col class="ion-text-center">
+                    <ion-button expand="block" size="large" color="dark" no-margin (click)="login()">
+                        <span>login</span>
+                    </ion-button>
+                </ion-col>
+            </ion-row>
+            <ion-row>
+                <ion-col class="ion-text-center">
+                    <ion-button expand="block" size="large" color="dark" no-margin (click)="register()">
+                        <span>sign up</span>
+                    </ion-button>
+                </ion-col>
+            </ion-row>
+
+    <ion-footer class="ion-text-center">
+        <div>
+            <ion-button (click)="dataProtection()" color="light-contrast"><span class="datenschutz">Datenschutzerklärung</span></ion-button>
+        </div>
+    </ion-footer>
+</ion-content>
+

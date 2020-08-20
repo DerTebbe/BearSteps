@@ -1,0 +1,40 @@
+<ion-header>
+    <ion-toolbar color="light">
+        <ion-buttons slot="start">
+            <ion-icon size="large" color="light" name="close-outline"></ion-icon>
+        </ion-buttons>
+        <ion-title class="ion-text-uppercase ion-text-center">{{finalTime}}</ion-title>
+        <ion-buttons slot="end" *ngIf="user && room">
+            <ion-icon color="danger" size="large" name="close-outline" (click)="showInputAlert()"
+                      *ngIf="user.id === room.creator.id"></ion-icon>
+        </ion-buttons>
+    </ion-toolbar>
+</ion-header>
+<ion-content>
+    <div #map id="map"></div>
+</ion-content>
+
+<div *ngIf="displayWin" class="win-container" @container>
+    <div class="pyro">
+        <div class="before"></div>
+        <div class="after"></div>
+        <div class="message">
+            <h1>{{this.winMessage}}</h1>
+        </div>
+    </div>
+</div>
+
+<ion-footer>
+    <ion-toolbar color="light" class="ion-text-center">
+        <ion-row>
+            <ion-col *ngIf="this.user.role === 'Mr.X'" class="ion-text-center">
+                <ion-button (click)="this.presentCatchword()" color="tertiary">Geheimwort anzeigen
+                </ion-button>
+            </ion-col>
+            <ion-col *ngIf="this.user.role === 'Detektiv'" class="ion-text-center">
+                <ion-button (click)="this.presentCatchMrX()" color="dark">Mr. X gefunden
+                </ion-button>
+            </ion-col>
+        </ion-row>
+    </ion-toolbar>
+</ion-footer>

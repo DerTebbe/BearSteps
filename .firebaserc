@@ -1,0 +1,17 @@
+{
+  "projects": {
+    "default": "gelaendespiel-app-aad6d"
+  },
+  "targets": {
+    "gelaendespiel-app-aad6d": {
+      "hosting": {
+        "app": [
+          "gelaendespiel-app-aad6d"
+        ],
+        "docs": [
+          "bearsteps-docs-be62b"
+        ]
+      }
+    }
+  }
+}

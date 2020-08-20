@@ -1,0 +1,52 @@
+<ion-header>
+    <ion-toolbar color="dark">
+        <ion-back-button slot="start"></ion-back-button>
+        <ion-title class="ion-text-center ion-text-uppercase">Spielauswahl</ion-title>
+        <ion-buttons slot="end">
+            <ion-button><ion-icon name="log-out" color="dark"></ion-icon></ion-button>
+        </ion-buttons>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <div class="curved first">
+        <ion-grid>
+            <div class="top">
+                <ion-label class="header">Finde Mr.X!</ion-label>
+                <br>
+                <p class="text">Räuber oder Gendarm?</p>
+                <ion-button class="start-game" (click)="selectGame()" shape="round">
+                    <ion-icon slot="icon-only" name="caret-forward-outline"></ion-icon>
+                </ion-button>
+                <br>
+                <ion-button (click)="openInfo()" color="warning" fill="clear" size="small" shape="round">
+                    <ion-icon slot="icon-only" name="help-circle-outline"></ion-icon>
+                </ion-button>
+            </div>
+        </ion-grid>
+    </div>
+    <div class="curved sec" >
+            <ion-label class="header" >Spiel 2</ion-label>
+            <br>
+            <p class="text">Platz für ein neues Game!</p>
+            <ion-button disabled  class="start-game"  shape="round">
+                <ion-icon slot="icon-only" name="caret-forward-outline"></ion-icon>
+            </ion-button>
+            <br>
+            <ion-button disabled  color="warning" fill="clear" size="small" shape="round">
+                <ion-icon slot="icon-only" name="help-circle-outline"></ion-icon>
+            </ion-button>
+    </div>
+    <div class="curved third">
+        <ion-label class="header">Spiel 3</ion-label>
+        <br>
+        <p class="text">Platz für ein neues Game!</p>
+        <ion-button disabled class="start-game"  shape="round">
+            <ion-icon slot="icon-only" name="caret-forward-outline"></ion-icon>
+        </ion-button>
+        <br>
+        <ion-button disabled color="warning" fill="clear" size="small" shape="round">
+            <ion-icon slot="icon-only" name="help-circle-outline"></ion-icon>
+        </ion-button>
+    </div>
+</ion-content>
